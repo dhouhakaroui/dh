@@ -58,7 +58,7 @@ body {
   cursor: pointer;
 }
 #img_here {
-  width: 90%;
+  width: 100%;
   height: 90%;
   background-size: contain !important;
   background-repeat: no-repeat !important;
@@ -131,11 +131,11 @@ header table {
   color: rgb(255, 44, 90);
   background: #fff;
   border: 3px solid rgb(255, 44, 90);
-  padding: 8px 40px;
+  padding: 8px 10px;
   width: 50%;
   border-radius: 80px;
   font-weight: bold;
-  margin: 2vh 0px;
+  margin: 20px 0px;
   transition: 0.4s ease-in-out;
 }
 .btn_one:hover {
@@ -147,6 +147,7 @@ header table {
 .btn_one a {
   color: rgb(255, 44, 90);
   text-decoration: none;
+  font-size: 80%;
 }
 .btn_one a:hover {
   color: #fff;
@@ -202,7 +203,7 @@ header table {
 #bio h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 10%;
+  width: 7rem;
 }
 #bio p {
   padding-top: 50px;
@@ -220,11 +221,12 @@ header table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 #skills h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 8%;
+  width: 6rem;
 }
 .my-skills {
   display: flex;
@@ -234,13 +236,14 @@ header table {
 }
 .skill {
   width: 25%;
+  padding: 20px;
 }
 .icon-container {
-  padding: 2%;
+  padding: 5%;
   font-size: 5rem;
 }
 .skill .iconify {
-  color: red;
+  color: rgb(105, 30, 30);
 }
 #work {
   width: 92%;
@@ -249,11 +252,12 @@ header table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 #work h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 13.5%;
+  width: 9rem;
 }
 #photos {
   width: 100%;
@@ -264,13 +268,39 @@ header table {
   width: 50%;
   height: auto;
   margin: 4.5% 0px;
+  border-radius: 5%;
   transition: 0.4s ease-in-out;
 }
 #photos img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-
+#photos h2 {
+  color: rgb(255, 44, 90);
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  padding: 0%;
+}
+.cart {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.parg {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+.parg .btn_one {
+  padding: 0;
+}
+.cart .proj {
+  display: flex;
+  flex-direction: column;
+}
 #contact {
   width: 92%;
   padding: 6vh 4vw;
@@ -281,7 +311,8 @@ header table {
 #contact h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 14%;
+  width: 9rem;
+  text-align: center;
 }
 #contact table {
   width: 100%;
@@ -352,7 +383,27 @@ header table {
   color: rgb(255, 44, 90);
   text-decoration: none;
 }
-
+#up {
+  position: relative;
+  left: 45%;
+  transform: translate(40%, -50%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255, 44, 90);
+  }
+  70% {
+    box-shadow: 0 0 0 2rem rgb(253, 87, 191, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(253, 87, 191, 0);
+  }
+}
 ::placeholder {
   color: #000;
 }
@@ -374,19 +425,20 @@ button:focus {
 }
 
 @media (max-width: 1000px) {
-  #photos {
-    columns: 1;
-    column-gap: 0%;
+  header {
+    width: 96%;
+    background: #fff;
+    padding: 4vh 2vw;
+    position: absolute;
   }
-  #photos img {
-    margin: 2% 0px;
+  #header table tr td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 15px 0px;
   }
-  #photos img:hover {
-    transform: scale(1);
-    cursor: pointer;
-  }
-  #rightImage {
-    display: none;
+  #navigation a {
+    color: #000;
   }
   #top_part {
     border: 0px;
@@ -395,6 +447,7 @@ button:focus {
     width: 100%;
     text-align: center;
   }
+
   #about {
     width: 92% !important;
     height: 75vh;
@@ -411,8 +464,8 @@ button:focus {
   }
   .btn_one {
     padding: 6px 30px;
-    width: 60%;
-    margin: 4vh auto;
+    width: 50%;
+    margin: 4% auto;
     box-shadow: 0px 10px 20px rgba(255, 44, 90, 0.8);
     background: rgb(255, 44, 90);
     color: #fff;
@@ -420,6 +473,49 @@ button:focus {
   .btn_one:hover {
     box-shadow: 0px 10px 40px rgba(255, 44, 90, 0.8);
     cursor: pointer;
+  }
+  .btn_one a {
+    color: #fff !important;
+    background-color: rgb(255, 44, 90);
+  }
+  #rightImage {
+    display: none;
+  }
+
+  #bio h1 {
+    width: 25%;
+  }
+  #skills h1 {
+    width: 18%;
+  }
+  #work h1 {
+    width: 25%;
+  }
+  .cart {
+    width: 100%;
+    flex-direction: column;
+  }
+  .parg {
+    width: 100%;
+  }
+  .parg h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .parg button {
+    width: 50%;
+    padding: 0;
+  }
+  #photos img {
+    margin: 2% 0px;
+    width: 100%;
+  }
+  #photos img:hover {
+    transform: scale(1);
+    cursor: pointer;
+  }
+  #contact h1 {
+    width: 28%;
   }
   #contact table tr td {
     width: 100%;
@@ -433,32 +529,5 @@ button:focus {
   }
   #contact form textarea {
     width: 90%;
-  }
-  #work h1 {
-    width: 19%;
-  }
-  #bio h1 {
-    width: 25%;
-  }
-  #skills h1 {
-    width: 33%;
-  }
-  #contact h1 {
-    width: 33%;
-  }
-  header {
-    width: 96%;
-    background: #fff;
-    padding: 4vh 2vw;
-    position: absolute;
-  }
-  #header table tr td {
-    width: 100%;
-    display: block;
-    text-align: center;
-    padding: 15px 0px;
-  }
-  #navigation a {
-    color: #000;
   }
 }

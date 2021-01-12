@@ -52,6 +52,10 @@ setTimeout(function(){
 },600);
 
 $(document).ready(function(){
+    $('#up').on('click', function () {
+        $('html,body').animate({
+            scrollTop:0 },2000);
+    });
     $("a").on('click', function(event) {
       if (this.hash !== "") {
         event.preventDefault();
