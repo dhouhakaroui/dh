@@ -203,7 +203,7 @@ header table {
 #bio h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 7rem;
+  width: 8rem;
 }
 #bio p {
   padding-top: 50px;
@@ -232,11 +232,12 @@ header table {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .skill {
-  width: 25%;
-  padding: 20px;
+  width: 250px;
+  padding: 10px;
 }
 .icon-container {
   padding: 5%;
@@ -257,7 +258,7 @@ header table {
 #work h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 9rem;
+  width: 10rem;
 }
 #photos {
   width: 100%;
@@ -290,16 +291,11 @@ header table {
 }
 .parg {
   width: 40%;
-  display: flex;
-  flex-wrap: wrap;
   margin: 5%;
 }
-.parg .btn_one {
-  padding: 0;
-}
-.cart .proj {
-  display: flex;
-  flex-direction: column;
+.parg a {
+  color: rgb(255, 44, 90);
+  padding: 0%;
 }
 #contact {
   width: 92%;
@@ -311,7 +307,7 @@ header table {
 #contact h1 {
   padding: 5px 0px;
   border-bottom: 4px solid rgb(255, 44, 90);
-  width: 9rem;
+  width: 10rem;
   text-align: center;
 }
 #contact table {
@@ -410,7 +406,7 @@ header table {
 button:focus {
   outline: none;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
@@ -422,7 +418,7 @@ button:focus {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.8);
-}
+} */
 
 @media (max-width: 1000px) {
   header {
@@ -450,8 +446,8 @@ button:focus {
 
   #about {
     width: 92% !important;
-    height: 75vh;
-    padding-top: 20vh !important;
+    /* height: 75vh; */
+    padding-top: 40vh !important;
     text-align: center;
     padding: 0px 4%;
   }
